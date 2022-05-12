@@ -8,7 +8,7 @@ class ThiagoDisplay:public Display{
 
 public:
     
-    void addDigit(Digit );
+    void add(Digit );
     void setDecimalSeparator();
     void setSignal(Signal );
     void setError();
