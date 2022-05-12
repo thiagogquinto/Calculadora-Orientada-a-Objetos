@@ -129,10 +129,6 @@ void ThiagoCPU::receiveControl(Control c){
        if(this->SignalOp2 == 1){
          this->op2[0] *= -1;
        }
-
-    
-    std::cout << "dentro do equal " << this->op1[0] << "-op1\n\n";
-    std::cout << "dentro do equal " << this->op2[0] << "-op2\n\n";
     
     switch (this->receive_operation) {
   
