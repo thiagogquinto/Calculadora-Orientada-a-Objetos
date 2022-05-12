@@ -1,5 +1,9 @@
 #include "Calculator.h"
 
+void Cpu::setDisplay(Display* dply){
+  this->display = dply; 
+}
+
 void Key::setReceiver(Receiver* receiver){
   this->receiver = receiver;
 }
