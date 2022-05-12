@@ -24,7 +24,7 @@ void ThiagoCPU::receiveDigit(Digit d){
 
   }
     
-  this->display?this->display->addDigit(d):void();
+  this->display?this->display->add(d):void();
 
 }
 
@@ -281,43 +281,43 @@ void ThiagoCPU::convertToDigit() {
    switch (result[i]) {
      
     case '0':
-      this->display?this->display->addDigit(ZERO):void();
+      this->display?this->display->add(ZERO):void();
       break;
   
     case '1':
-      this->display?this->display->addDigit(ONE):void();
+      this->display?this->display->add(ONE):void();
       break;
   
     case '2':
-      this->display?this->display->addDigit(TWO):void();
+      this->display?this->display->add(TWO):void();
       break;
       
     case '3':
-      this->display?this->display->addDigit(THREE):void();
+      this->display?this->display->add(THREE):void();
       break;
       
      case  '4':
-       this->display?this->display->addDigit(FOUR):void();
+       this->display?this->display->add(FOUR):void();
        break;
   
     case '5':
-      this->display?this->display->addDigit(FIVE):void();
+      this->display?this->display->add(FIVE):void();
       break;
 
      case '6':
-      this->display?this->display->addDigit(SIX):void();
+      this->display?this->display->add(SIX):void();
       break;
 
      case '7':
-      this->display?this->display->addDigit(SEVEN):void();
+      this->display?this->display->add(SEVEN):void();
       break;
     
      case '8':
-       this->display?this->display->addDigit(EIGHT):void();
+       this->display?this->display->add(EIGHT):void();
        break;
 
      case '9':
-      this->display?this->display->addDigit(NINE):void();
+      this->display?this->display->add(NINE):void();
       break;
 
      case '.':
