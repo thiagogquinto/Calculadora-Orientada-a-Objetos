@@ -6,10 +6,6 @@
 #include <cstdio>
 
 
-void ThiagoCPU::setDisplay(Display* dply){
-  this->display = dply; 
-}
-
 void ThiagoCPU::receiveDigit(Digit d){
 
   if(this->CountDigit2 == 0){
