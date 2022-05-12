@@ -27,7 +27,6 @@ class ThiagoCPU: public Cpu{
   int pot(int );
 
 public:
-    void setDisplay(Display* );
     void receiveDigit(Digit );
     void receiveOperation(Operation );
     void receiveControl(Control );
