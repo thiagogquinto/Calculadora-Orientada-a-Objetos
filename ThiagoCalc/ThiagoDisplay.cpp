@@ -1,7 +1,7 @@
 #include "ThiagoDisplay.h"
 #include <iostream>
 
-void ThiagoDisplay::addDigit(Digit dig){
+void ThiagoDisplay::add(Digit dig){
   if(this->CountDigit < 8 ){
     if(dig == ZERO){ std::cout << "0000\n0  0\n0  0\n0  0\n0000\n\n";}
     if(dig == ONE){std::cout<<"0\n0\n0\n0\n0\n\n";}
