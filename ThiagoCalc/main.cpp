@@ -25,7 +25,7 @@ int main() {
 
   KeyOperation keyAddition(ADDITION), keySubtraction(SUBTRACTION), keyDivision(DIVISION), keyMultiplication(MULTIPLICATION), keySquareRoot(SQUARE_ROOT), keyPercentage(PERCENTAGE);
 
-  KeyControl keyDecimalSeparator(DECIMAL_SEPARATOR), keyEqual(EQUAL);
+  KeyControl keyDecimalSeparator(DECIMAL_SEPARATOR), keyEqual(EQUAL), keyMRC(MEMORY_READ_CLEAR), keyMemSub(MEMORY_SUBTRACTION), keyMemAdd(MEMORY_ADDITION);
 
   keyDecimalSeparator.setReceiver(&keyboard);
   keyEqual.setReceiver(&keyboard);
@@ -76,23 +76,37 @@ int main() {
   key3.press();
   keyDecimalSeparator.press();
   key5.press();
+  key2.press();
+  key3.press();
+  key4.press();
+  key7.press();
+  key8.press();
+  key1.press();
   
   keyAddition.press();
 
   key2.press();
   keyDecimalSeparator.press();
   key8.press();
+  key2.press();
+  key2.press();
+  key2.press();
+  key2.press();
+  key2.press();
+  key2.press();
+  key2.press();
   
   keyEqual.press();
   
   keySubtraction.press();
 
-  //keySubtraction.press();
+  keySubtraction.press();
   key3.press();
   keyDecimalSeparator.press();
   key4.press();
 
   keyEqual.press();
 
+ 
 }
 

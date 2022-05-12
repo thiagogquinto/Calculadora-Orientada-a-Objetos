@@ -6,6 +6,7 @@ class ThiagoCalculator: public Calculator{
   Display* dply;
   Cpu* cpu;
   Keyboard* kbd;
+
   public:
      void setDisplay(Display* );
      void setCpu(Cpu* );

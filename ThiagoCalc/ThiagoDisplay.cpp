@@ -19,16 +19,10 @@ void ThiagoDisplay::addDigit(Digit dig){
 
 
 void ThiagoDisplay::setDecimalSeparator(){
- // if(this->DecimalSeparator == 0){
     std::cout << "\n00\n00\n\n";
-    // this->posDec = this->CountDigit;
+
     this->CountDigit++;
     this->DecimalSeparator++;  
-  //}
-}
-
-void ThiagoDisplay::resetDecimalSeparator(){
-  this->DecimalSeparator = 0;
 }
 
 void ThiagoDisplay::setSignal(Signal sinal){
@@ -45,7 +39,6 @@ void ThiagoDisplay::setError(){
 void ThiagoDisplay::clear() {
     this->DecimalSeparator = 0;
     this->CountDigit = 0;
-    // std::cout << "\n\n\n\n\n\n\n";
 }
 
 

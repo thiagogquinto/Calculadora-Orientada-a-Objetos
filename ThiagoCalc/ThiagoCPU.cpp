@@ -34,9 +34,7 @@ void ThiagoCPU::receiveDigit(Digit d){
 
 void ThiagoCPU::receiveOperation(Operation operation){
 
-    
-  
-    if(operation == SUBTRACTION && this->CountDigit1 == 0 && this->SignalOp1 == 0) {
+     if(operation == SUBTRACTION && this->CountDigit1 == 0 && this->SignalOp1 == 0) {
       this->display?this->display->setSignal(NEGATIVE) : void();
       this->SignalOp1++;
    
@@ -85,6 +83,7 @@ void ThiagoCPU::receiveControl(Control c){
 
   }
 
+  
   if(c == RESET){
      std::cout << "0000\n0  0\n0  0\n0  0\n0000\n";
     this->op1[0] = 0;
@@ -95,23 +94,24 @@ void ThiagoCPU::receiveControl(Control c){
     this->memory = 0;
    }
 
+  
   if(c == MEMORY_READ_CLEAR){
+    this->display?this->display->clear() : void();
     this->convertToDigit();
     this->memory = 0;
-    this->op1[0] = 0;
-    this->op2[0] = 0;
   }
 
+  
   if(c == MEMORY_ADDITION){
     this->memory += this->op1[0];
-    this->op1[0] = 0;
-    this->op2[0] = 0;
+    // this->op1[0] = 0;
+    // this->op2[0] = 0;
   }
 
   if(c == MEMORY_SUBTRACTION) {
     this->memory -= this->op1[0];
-    this->op1[0] = 0;
-    this->op2[0] = 0;
+    // this->op1[0] = 0;
+    // this->op2[0] = 0;
   }
 
   if(c == EQUAL){
@@ -129,11 +129,13 @@ void ThiagoCPU::receiveControl(Control c){
        if(this->SignalOp2 == 1){
          this->op2[0] *= -1;
        }
+
     
     switch (this->receive_operation) {
   
       
     case ADDITION:
+      
       this->op1[0] = this->op1[0] + this->op2[0];
       break;
   
@@ -170,7 +172,6 @@ void ThiagoCPU::receiveControl(Control c){
     }
 
     std::cout << "\n\n\n";
-    this->memory = this->op1[0];
     this->convertToDigit();
 
   }
@@ -220,6 +221,8 @@ void ThiagoCPU::convertOp1(){
         pos3++;
     }
   }
+  
+    
 }
 
 void ThiagoCPU::convertOp2(){
@@ -260,7 +263,7 @@ void ThiagoCPU::sumAllVector1(){
     this->op1[i-1] += this->op1[i];
     this->op1[i] = 0;
   }
-
+ 
 }
 
 void ThiagoCPU::sumAllVector2(){
@@ -269,6 +272,7 @@ void ThiagoCPU::sumAllVector2(){
     this->op2[i] = 0;
      
     }  
+ 
 }
 
 void ThiagoCPU::convertToDigit() {

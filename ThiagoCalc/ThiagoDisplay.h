@@ -10,10 +10,9 @@ public:
     
     void addDigit(Digit );
     void setDecimalSeparator();
-    void resetDecimalSeparator();
-    void resetCountDigit();
     void setSignal(Signal );
     void setError();
     void clear();
+
 };
 
