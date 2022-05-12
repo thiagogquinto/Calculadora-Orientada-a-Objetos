@@ -10,7 +10,7 @@ enum Signal {POSITIVE, NEGATIVE};
 
 class Display{
   public:
-    virtual void addDigit(Digit ) = 0;
+    virtual void add(Digit ) = 0;
     virtual void setDecimalSeparator() = 0;
     virtual void setSignal(Signal ) = 0;
     virtual void setError() = 0;
